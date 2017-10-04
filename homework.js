@@ -1,10 +1,12 @@
 var readline = require("readline");
 
+///Elon Jefferson
+
 var rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   });
-
+  
 function math(arr){
     num = arr[1];
     for (var i = 2; i < arr.length; i++) {
