@@ -1,12 +1,10 @@
 var readline = require("readline");
 
+var sum = 0;
 var rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   })
-
-
-var sum = 0;
 
 rl.on('line', function(input) {
     
