@@ -35,5 +35,4 @@ rl.on("line", function(input){
     }else{
         console.log(math(inputArr))
     }
-
 });
