@@ -1,0 +1,87 @@
+body, html {
+    background-color: #fff4db;
+    margin: 0;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.black {
+    background-color: black;
+}
+
+.right { 
+    float: right; 
+}
+
+#toprow {
+    height: 290px;
+}
+
+#bottomrow{
+    position: inherit
+}
+
+#bigbox {
+    width: 70%;
+    height: 80vh;
+}
+
+.mediumbox {
+    width: 30%;
+    height: 40vh;
+}
+
+.tinybox{
+    width:15%;
+    height: 10vh;
+    margin: -.5em auto auto 85%;
+}
+
+#smallbox{
+    width: 30%;
+    height: 20vh;
+    margin: -1em -10px auto;
+    position: absolute;
+    z-index: -1;
+}
+
+#divider1 { 
+    height: 100vh; 
+    width: 1em;
+}
+
+#divider2 {
+    height: 1em;
+    width: 100%;
+}
+
+#divider3{
+    height:20vh;
+    width: 1em;
+    position: absolute;
+    margin: -1em auto auto 85%; 
+}
+
+#divider4{
+    height:1em;
+    width: 15%;
+    margin: -.5em auto auto 85%;
+    position: absolute;
+}
+
+#middlerow {
+    height: 1em;
+    width: 100%;
+    margin-top: -1em;
+    position: absolute;
+}

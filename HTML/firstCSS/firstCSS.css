@@ -1,0 +1,19 @@
+h1 {
+    background-color: black;
+    color:white;
+    font-family: Papyrus;
+    border: 8px solid red;
+    padding-top: 10px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+li {
+    text-align: center;
+    list-style: none;
+}
+
+/* color, background-color, font-family, border. */
