@@ -1,0 +1,42 @@
+#navigation {
+    margin-top: 2em;
+}
+#navigation ul {
+    margin-left: 0;
+    padding: 0;
+}
+    
+#navigation li {
+    display: inline;
+    background-color: gray;
+    margin-right: 1em;
+    padding: 1em;
+}
+    
+#case {
+    background-color: lightgray;
+    padding: 1em;
+    margin-top: -2px;
+    width: 40%;
+}
+    
+#footer {
+    background-color: gray;
+    margin: 0;
+    padding: 1em;
+    width: 40%;
+}
+    
+#footer ul {
+    margin-top: 0;
+    list-style-type: none;
+    padding: 0;
+}
+    
+#footer  li {
+    display: inline
+}
+    
+a:hover{
+    color:red;
+}
