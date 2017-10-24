@@ -1,0 +1,27 @@
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    background-color: #29B6F6;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20%; 
+}
+
+ul{
+    text-align: center;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+li{
+    border-bottom: 1px solid white;
+    list-style-type: none;
+    display: inline;
+    margin: 5% 2%;
+}
