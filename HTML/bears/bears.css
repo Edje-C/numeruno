@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    color: rgb(14, 70, 31);
+    font-size: 24px;
+    font-family: 'Questrial', sans-serif;
+}
+
+#content{
+    position: absolute;
+    width: 40em;
+    margin: 10% 17%;
+}
+
+@media(max-width:961px){
+    #content{
+        width: 30em;
+    }
+}
+
+h1{
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    bottom:5vh;
+    color: white;
+    left: 2%;
+    font-size: 1.5em;
+    padding-left: 4%;
+}
+
+#header{
+    width: 100vw;
+    height: 100vh;
+    font-size: 8em;
+    background: url(https://images.unsplash.com/photo-1500064171035-d88a47d65074?w=1982&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+}
+
+p{
+    line-height: 2em;
+}
