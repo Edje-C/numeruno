@@ -1,0 +1,17 @@
+body{
+    background-image: url("paper.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+fieldset{
+    margin: 2em;
+}
+
+#paper{
+    width: 55em;
+    height: 70em;
+    padding: 2em;
+    margin: 7em;
+    background: white;
+}
