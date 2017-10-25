@@ -1,0 +1,39 @@
+body{
+    font-family: 'Poiret One', cursive;
+    font-size: 24px;
+    background-color: #D9594C;
+    color: #F4B9B2;
+}
+
+#leftSidebar{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    float: left;
+    padding: 2em;
+}
+
+#rightSidebar{
+    float: right;
+    width: 75%;
+    height: 100%;
+    padding: 2em;
+    border-left: 1px solid #F4B9B2;
+}
+
+a{
+    margin: 1em;
+    display: block;
+    width: 4em;
+    text-decoration: none;
+    color: #F4B9B2;
+    border-bottom: 1px solid #F4B9B2;
+}
+
+h1{
+    margin: 0;
+}
+
+p{
+    line-height: 2em;
+}
