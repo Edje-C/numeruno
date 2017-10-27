@@ -32,6 +32,8 @@ a{
 
 h1{
     margin: 0;
+    font-color: #4cd959
+    /*this is a good complimentary color, goes well with the strawberry theme though I know you prefer mono color schemes with singular color variants*/    
 }
 
 p{
