@@ -1,0 +1,41 @@
+body{
+    font-size: 1em;
+    color: white;
+    text-align: center;
+}
+
+div p{
+    margin: 0;
+    padding-top: 50%;
+}
+
+#topLeft{
+    width: 12.5em;
+    height: 12.5em;
+    background-color: black;
+    position: absolute;
+}
+
+#topRight{
+    width: 12.5em;
+    height: 12.5em;
+    background-color: black;
+    position: absolute;
+    margin-left: 25%;
+}
+
+#bottomLeft{
+    width: 12.5em;
+    height: 12.5em;
+    background-color: black;
+    position: absolute;
+    margin-top: 25%; 
+}
+
+#bottomRight{
+    width: 12.5em;
+    height: 12.5em;
+    background-color: black;
+    position: absolute;
+    margin: 25%; 
+}
