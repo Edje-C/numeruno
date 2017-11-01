@@ -1,0 +1,1 @@
+document.getElementsByTagName("button")[0].onclick = function(){alert(document.getElementById("container").value)}
