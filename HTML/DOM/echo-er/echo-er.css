@@ -1,3 +1,9 @@
 body{
-    font-size: 1em;
+    background: rebeccapurple;
+    text-align: center;
+    margin-top: 100px; 
+}
+
+.upper{
+    text-decoration: underline;
 }
