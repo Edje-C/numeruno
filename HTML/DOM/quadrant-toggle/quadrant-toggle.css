@@ -1,0 +1,35 @@
+body{
+    font-size: 1em;
+    color: red;
+    text-align: center;
+}
+
+div{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+}
+
+div p{
+    margin: 0;
+    padding-top: 25%;
+}
+
+.black{
+    background-color: black;
+}
+
+#topLeft{
+}
+
+#topRight{
+    margin-left: 51%;
+}
+
+#bottomLeft{
+    margin-top: 29%; 
+}
+
+#bottomRight{
+    margin: 29% 51%; 
+}
