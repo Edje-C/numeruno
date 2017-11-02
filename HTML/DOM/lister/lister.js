@@ -9,21 +9,20 @@ document.addEventListener("keypress", function (e) {
         li.innerText = input.value;
         ul.appendChild(li);
         input.value = "";
+    }
+});
 
-        document.querySelectorAll("li").forEach(function (i) {
-            i.addEventListener("click", function () {
-                i.style.textDecoration !== "line-through" ? i.style.textDecoration = "line-through" : i.style.textDecoration = "none"
-            });
-        });
+
+ul.addEventListener("click", function(e){
+    e.target.style.textDecoration !== "line-through" ? e.target.style.textDecoration = "line-through" : e.target.style.textDecoration = "none"
+})
+
 
         
-        btn.addEventListener("click", function () {
-            document.querySelectorAll("li").forEach(function (i) {
-                if(i.style.textDecoration === "line-through"){
-                    ul.removeChild(i);
-                }
-            });
-        });
-    
-    }
+btn.addEventListener("click", function () {
+    document.querySelectorAll("li").forEach(function (i) {
+        if(i.style.textDecoration === "line-through"){
+            ul.removeChild(i);
+        }
+    });
 });
