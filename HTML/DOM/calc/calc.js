@@ -1,4 +1,7 @@
 var outputDiv;
+var equation = "";
+var doubles = [];
+var lastDub;
 
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var operators = ['+', '-', '*', '/'];
@@ -11,50 +14,115 @@ var operations = ['add', 'sub', 'mul', 'div']
  */
 function calculate(mathExp) {
     try {
-        return eval(mathExp)
+        ans = eval(mathExp).toString()
+        if(ans.length>16) {
+            ans = ans.substring(0, 15);
+        }
+        return ans;
     } catch (e) {
         return NaN
     }
 }
 
+function backspace(){
+    outputDiv.innerText = outputDiv.innerText.substring(0, outputDiv.innerText.length-1);
+    equation = equation.substring(0, equation.length-1);
+}
+
+function equal(){
+    if(operators.includes(outputDiv.innerText.substr(-1))){
+        return
+    }
+    outputDiv.innerText = calculate(equation)
+    equation = ""
+}
+
+function clear(){
+    outputDiv.innerText = "";
+    equation = "";
+}
+
+
 document.addEventListener('DOMContentLoaded', function () {
     outputDiv = document.getElementById('output');
-    var equation = "";
-    document.addEventListener('click', function (event) {
-        var elementId = event.target.id;
-        var elementText = event.target.innerText
 
-        if (elementId === "clr") {
-            outputDiv.innerText = ""
-            equation = ""
+
+    document.addEventListener('keydown', function (event) {
+
+        if (event.key === lastDub) {
+            return
         }
 
-        if (outputDiv.innerText.length === 13) {
+        if((lastDub === "=" || lastDub === "Enter") && equation===""){
+            doubles = ["!"]
+            outputDiv.innerText = ""        
+        }
+
+        if(event.key === "c"){
+            clear()
+        }
+
+        if(event.key === "Backspace"){
+            backspace()
+        }
+
+        if(event.key === "Enter" || event.key === "="){
+            equal()
+        }
+        
+        if (outputDiv.innerText.length === 18) {
             alert("You need to evaluate your equation or clear")
-        } else if (outputDiv.innerText.length > 14) {
+        } else if (outputDiv.innerText.length > 18) {
+            return
+        }
+        
+        if("+-*/=Enter".includes(event.key)){
+            doubles.push(event.key)
+            lastDub = doubles.slice(-1)[0]    
+        }
+        
+        if(event.key.match(/[0-9]/) || operators.includes(event.key)){
+            outputDiv.innerText += event.key;
+            equation += event.key;
+        }
+    
+    })
+
+    document.addEventListener('click', function (event) {
+        var elementId = event.target.id;
+        var elementText = event.target.innerText;
+
+        if(elementId === "clr"){
+                clear()
+        }
+
+        if(elementId === "backspace"){
+                backspace()
+        }
+
+        if((lastDub === "=" || lastDub === "Enter") && equation===""){
+            doubles = ["!"]
+            outputDiv.innerText = ""
+        }    
+
+        if (outputDiv.innerText.length === 18) {
+            alert("You need to evaluate your equation or clear")
+        } else if (outputDiv.innerText.length > 18) {
             return
         }
 
         if (!numbers.includes(elementText)) {
-            var doubles = "";
-            if (elementText === doubles[doubles.length - 1]) {
-                doubles = ""
+            
+           if (elementText === lastDub && !numbers.includes(equation.substr-1)) {
+                return
             } else if (operations.includes(elementId)) {
-                doubles += elementText
                 equation += elementText
                 outputDiv.innerText += elementText
             } else if (elementId === "eq") {
-                doubles += elementText
-                ans = calculate(equation)
-                if((ans).toString().length>16) {
-                    ans = ans.toString()
-                    outputDiv.innerText = ans.substring(0, 15)
-                    equation = ans.substring(0, 15)
-                } else {
-                    outputDiv.innerText = ans
-                    equation = ans
-                }
+                equal()
             }
+            doubles.push(elementText)
+            lastDub = doubles.slice(-1)[0]    
         } else {
             outputDiv.innerText += elementId;
             equation += elementId;
