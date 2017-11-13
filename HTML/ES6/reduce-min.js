@@ -1,0 +1,1 @@
+const reduceMin = arr => arr.reduce((x,y) => x<y? x : y)

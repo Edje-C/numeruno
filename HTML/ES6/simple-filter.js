@@ -1,0 +1,1 @@
+const greaterThan10 = arr => arr.filter(v => v>10)

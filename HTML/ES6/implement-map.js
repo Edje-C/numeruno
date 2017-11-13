@@ -1,0 +1,1 @@
+const map = (arr, callback) => arr.map(v => callback(v))

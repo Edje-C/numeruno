@@ -1,0 +1,1 @@
+const foreach = (arr) => arr.forEach(v => console.log(v))

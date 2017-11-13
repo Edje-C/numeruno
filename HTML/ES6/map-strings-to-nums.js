@@ -1,0 +1,1 @@
+const stringsToNums = arr => arr.map(v => Number(v))

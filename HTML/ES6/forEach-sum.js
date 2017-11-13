@@ -1,0 +1,1 @@
+const forEachSum = arr => arr.reduce((x,y) => x+y)

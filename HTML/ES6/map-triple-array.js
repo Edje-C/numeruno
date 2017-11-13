@@ -1,0 +1,1 @@
+const mapTrip = arr => arr.map(v => v*3)

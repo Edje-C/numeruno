@@ -1,0 +1,1 @@
+const filterEvens = arr => arr.filter(v => v%2===0)
